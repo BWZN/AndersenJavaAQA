@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="AllTests Suite" parallel="classes" thread-count="2">
+    <test name="AllTests">
+        <parameter name="email" value="email1@email.email"/>
+        <parameter name="password" value="21424134314"/>
+
+        <parameter name="email" value="email2@email.email"/>
+        <parameter name="password" value="23345197"/>
+
+        <parameter name="email" value="email3@email.email"/>
+        <parameter name="password" value="23537197"/>
+
+        <classes>
+            <class name="lesson16.dataProvider.LoginCheck"/>
+        </classes>
+    </test>
+</suite>
