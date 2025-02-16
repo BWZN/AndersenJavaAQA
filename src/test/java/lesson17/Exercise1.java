@@ -124,8 +124,8 @@ public class Exercise1 {
     }
 
     private void login() {
-        driver.findElement(By.name("email")).sendKeys("sezamkz@mail.ru");
-        driver.findElement(By.name("password")).sendKeys("!Sezamkz19122002");
+        driver.findElement(By.name("email")).sendKeys("test");
+        driver.findElement(By.name("password")).sendKeys("test");
         driver.findElement(By.tagName("button")).click();
     }
 
