@@ -6,14 +6,14 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class LoginPageTest {
+public class LoginPageTestExercise {
     private static WebDriver driver;
-    private static LoginPage loginPage;
+    private static LoginPageExercise loginPage;
 
     @BeforeClass
     public void setup() {
         driver = DriverSetup.driverInit();
-        loginPage = new LoginPage(driver);
+        loginPage = new LoginPageExercise(driver);
     }
 
     @AfterClass
