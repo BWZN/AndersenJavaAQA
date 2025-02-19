@@ -24,8 +24,8 @@ public class LoginPageTestExercise {
     @Test
     public void validLogin() {
         loginPage.openPage();
-        loginPage.setEmailAdress("sezamkz@mail.ru");
-        loginPage.setPassword("!Sezamkz19122002");
+        loginPage.setEmailAdress("test");
+        loginPage.setPassword("test");
         loginPage.clickButton();
         loginPage.checkLinkRedirection();
     }
