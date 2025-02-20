@@ -1,11 +1,15 @@
 package lesson18;
 
+import io.qameta.allure.*;
 import lesson15.utils.DriverSetup;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import utils.listener.MyAllureListeners;
 
+@Listeners({MyAllureListeners.class})
 public class RegistrationPageTestExercise {
     private static WebDriver driver;
     private static RegistrationPageExercise registrationPage;
@@ -21,25 +25,34 @@ public class RegistrationPageTestExercise {
         driver.quit();
     }
 
+    @Description("Test with valid registration")
+    @Severity(SeverityLevel.CRITICAL)
+    @Story("US 1.1")
     @Test
     public void validValueRegistration() {
         registrationPage.openPage();
         registrationPage.setFirstName("Test");
         registrationPage.setLastName("Test2");
         registrationPage.setDateOfBirth("02/02/2002");
-        registrationPage.setEmailAdress("Test6@domain.com");
+        registrationPage.setEmailAdress("Test23211114@domain.com");
         registrationPage.setPassword("123456789");
         registrationPage.setPasswordConfirmation("123456789");
         registrationPage.clickButton();
         registrationPage.checkLinkRedirection();
     }
 
+    @Description("Test link redirection")
+    @Severity(SeverityLevel.CRITICAL)
+    @Story("US 1.2")
     @Test
     public void linkRedirection() {
         registrationPage.openPage();
         registrationPage.checkSignInRedirection();
     }
 
+    @Description("Test required fields")
+    @Severity(SeverityLevel.CRITICAL)
+    @Story("US 1.2")
     @Test
     public void requiredFields() {
         registrationPage.openPage();
@@ -53,6 +66,9 @@ public class RegistrationPageTestExercise {
         registrationPage.checkRequiredField();
     }
 
+    @Description("Test registration with empty first name")
+    @Severity(SeverityLevel.CRITICAL)
+    @Story("US 1.2")
     @Test
     public void registrationWithEmptyFirstName() {
         registrationPage.openPage();
@@ -66,6 +82,9 @@ public class RegistrationPageTestExercise {
         registrationPage.checkRequiredField();
     }
 
+    @Description("Test with diff. passwords")
+    @Severity(SeverityLevel.CRITICAL)
+    @Story("US 1.2")
     @Test
     public void registrationWithDifferentPasswords() {
         registrationPage.openPage();
@@ -79,6 +98,9 @@ public class RegistrationPageTestExercise {
         registrationPage.checkPasswordMatch();
     }
 
+    @Description("Test with diff. languages")
+    @Severity(SeverityLevel.CRITICAL)
+    @Story("US 1.2")
     @Test
     public void registrationWithDifferentLanguage() {
         registrationPage.openPage();
