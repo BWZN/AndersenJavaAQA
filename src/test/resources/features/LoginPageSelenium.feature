@@ -11,7 +11,7 @@ Background:
     Then I redirect to profile page
     Examples:
       | text1 | text2 |
-      | sezamkz@mail.ru | !Sezamkz19122002 |
+      | test | test |
 
 
   Scenario Outline: Test of Login with invalid values
